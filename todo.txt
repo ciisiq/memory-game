@@ -1,0 +1,21 @@
+- Make a head 
+    - P = Mamory game
+    - P = Have Fun
+
+- Make main <section>
+    
+    Rith side:
+    - p = Explanation about the game
+    - p = Explanation about the score
+
+    <card> 
+        - Time 
+        - score
+        - Reset button
+  
+    Left Side
+    - Cards display = 12 cards 
+    - H1 = Title to start the game
+
+- Make a footer
+    - P = With link to my github
