@@ -30,4 +30,11 @@ const randomizeCards = () => {
   console.log(cardData);
 };
 
-randomizeCards();
+const backCard = document.createElement("div");
+const frontCard = document.createElement("div");
+
+const displayCard = () => {
+  randomizeCards().map((d) => backCard.getCards.image);
+};
+
+displayCard();
