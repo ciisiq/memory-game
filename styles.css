@@ -125,6 +125,7 @@ a {
   width: 150px;
   height: 200px;
   position: absolute;
+  pointer-events: none;
 }
 
 .front {
