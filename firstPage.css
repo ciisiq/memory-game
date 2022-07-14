@@ -107,8 +107,8 @@ h2 {
   align-items: center;
 
   position: absolute;
-  bottom: 150px;
-  right: 160px;
+  bottom: 120px;
+  right: 150px;
 }
 
 .panda-love {
@@ -137,4 +137,41 @@ h2 {
 
 .start:active {
   transform: translateY(4px);
+}
+
+@media (max-width: 390px) {
+  .blue-container {
+    height: 250px;
+    width: 320px;
+  }
+
+  .explanation {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .start {
+    width: 60px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .panda-love,
+  .relax-panda {
+    height: 90px;
+    width: 90px;
+  }
+
+  .panda-love {
+    height: 70px;
+    width: 70px;
+  }
+
+  .wrap-panda-btn {
+    bottom: 120px;
+    right: 0.1px;
+  }
 }
