@@ -12,25 +12,27 @@ body {
 header {
   display: flex;
   width: 100%;
-  height: 60px;
-  top: 0;
   background-color: #000000;
   color: #f4c4c9;
+  align-items: center;
+  justify-content: flex-end;
+
+  /* import for to fix the header on top */
+  top: 0;
   position: fixed;
   z-index: 1;
-  justify-content: space-between;
-  align-items: center;
+  height: 60px;
 }
 
 .main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
+  /* to show after the header */
   height: calc(100vh - 60px);
   top: 60px;
-  position: relative;
-
-  justify-content: center;
+  /* position: relative; */
 }
 
 .lives {
@@ -46,21 +48,51 @@ header {
   gap: 1em;
   align-items: center;
   justify-content: center;
+
+  perspective: 1000px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.front {
+.card {
+  position: relative;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition-timing-function: ease-in;
+
+  /* border: 2px solid #f4c4c9; */
+  border-radius: 15px;
+  background-color: white;
+
+  /*need the size for to be in place */
   width: 150px;
   height: 200px;
-  border: 2px solid #f4c4c9;
+}
 
-  position: absolute;
-  -webkit-backface-visibility: hidden; /* Safari */
+.card:active,
+.memory-game {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  position: absolute;
+  background-color: transparent;
+  width: 150px;
+  height: 200px;
+}
+
+/* .fron,
+.back:active {
+  transform: scale(2);
+} */
+
+.front {
 }
 
 .back {
-  width: 150px;
-  height: 200px;
-
-  /* transform: rotateY(180deg); */
+  transform: rotateY(180deg);
 }

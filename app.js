@@ -10,62 +10,62 @@ playerLives.textContent = countLives;
 const getCards = () => [
   {
     image: "images/panda1-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda1",
   },
   {
     image: "images/panda2-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda2",
   },
   {
     image: "images/panda3-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda3",
   },
   {
     image: "images/panda4-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda4",
   },
   {
     image: "images/panda5-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda5",
   },
   {
     image: "images/panda6-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda6",
   },
   {
     image: "images/panda1-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda1",
   },
   {
     image: "images/panda2-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda2",
   },
   {
     image: "images/panda3-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda3",
   },
   {
     image: "images/panda4-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda4",
   },
   {
     image: "images/panda5-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda5",
   },
   {
     image: "images/panda6-01.png",
-    back: "images/pandafront-01.png",
+    back: "images/pandafront-invert.png",
     name: "panda6",
   },
 ];
