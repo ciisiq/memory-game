@@ -2,7 +2,7 @@ const section = document.querySelector("section");
 const playerLives = document.querySelector(".livesPlayer");
 const resetButton = document.querySelector(".reset");
 
-let countLives = 3;
+let countLives = 5;
 playerLives.textContent = countLives;
 
 const getCards = () => [
@@ -107,6 +107,7 @@ const checkCards = (e) => {
   const clickedCard = e.target;
   clickedCard.classList.add("flipped");
   const flippedCards = document.querySelectorAll(".flipped");
+  const selectToggle = document.querySelectorAll(".toggleCard");
   console.log(flippedCards);
 
   if (flippedCards.length === 2) {
@@ -125,15 +126,44 @@ const checkCards = (e) => {
         card.classList.remove("flipped");
         setTimeout(() => card.classList.remove("toggleCard"), 1000);
       });
+      countLives--;
+      playerLives.textContent = countLives;
+      if (countLives === 0) {
+        restartGame("😭 Oh no, you lost the game 🐼");
+      }
     }
   }
+
+  if (selectToggle.length === 12) {
+    restartGame("🎉 Congratulations, you won 🎉🐼");
+  }
+};
+
+const restartGame = (text) => {
+  const cardData = randomizeCards();
+  const faces = document.querySelectorAll(".back");
+  const cards = document.querySelectorAll(".card");
+
+  section.style.pointerEvents = "none";
+
+  cardData.forEach((item, index) => {
+    cards[index].classList.remove("toggleCard");
+
+    setTimeout(() => {
+      cards[index].style.pointerEvents = "all";
+      faces[index].src = item.image;
+      cards[index].setAttribute("name", item.name);
+      section.style.pointerEvents = "all";
+    }, 1000);
+  });
+
+  countLives = 5;
+  playerLives.textContent = countLives;
+  setTimeout(() => window.alert(text), 100);
 };
 
 createCard();
 
-while (playerLives > 0) {
-  if (choice1 !== choice2) {
-    playerLives = countLives - 1;
-  } else {
-  }
-}
+const buttonAgain = resetButton.addEventListener("click", () => {
+  restartGame("Starting again! good luck!");
+});
