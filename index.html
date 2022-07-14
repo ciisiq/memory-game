@@ -6,30 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory game</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="firstPage.css" />
   </head>
   <body>
     <header>
       <p class="title">
-        <a href="https://github.com/ciisiq/memory-game" target="_blank"
+        <a
+          class="link"
+          href="https://github.com/ciisiq/memory-game"
+          target="_blank"
           >🐼 Memory Game</a
         >
       </p>
       <p class="who">
-        <a href="https://github.com/ciisiq" target="_blank"
+        <a class="link" href="https://github.com/ciisiq" target="_blank"
           >By Cintia Siqueira</a
         >
       </p>
     </header>
     <main class="main">
-      <div class="wrap">
-        <div class="container">
-          <h1 class="lives">Lives: <span class="livesPlayer"></span></h1>
-          <button class="reset">Start Again</button>
+      <div class="wrap-panda-title">
+        <img
+          class="relax-panda"
+          src="images/panda-relax.gif"
+          alt="a panda in relax position"
+          loop="infinite"
+        />
+        <h2>Panda memory game</h2>
+      </div>
+
+      <div class="blue-container">
+        <div class="container-explanation">
+          <p class="explanation">
+            You need to find each panda's<br />
+            pair (the same card) before <br />
+            your lives run out! <br /><br />
+
+            Good luck!
+          </p>
+          <div class="wrap-panda-btn">
+            <img
+              class="panda-love"
+              src="images/panda-love.gif"
+              alt="a panda in relax position"
+            />
+            <button class="start"><a href="game.html">Start</a></button>
+          </div>
         </div>
       </div>
-      <section class="memory-game"></section>
     </main>
-    <script src="app.js"></script>
   </body>
 </html>

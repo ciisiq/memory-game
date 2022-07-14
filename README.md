@@ -7,7 +7,7 @@ A Simple project using Javascript and DOM manipulation</br>
 ❗❗ Panda's image were taken from the internet and I couldn't find who they belong to. I just create the design for the favicon and the cards layout! ❗❗ </br></br>
 
 It is the wireframe guide for the project:
-![Alt text](images/page1.png?raw=true "Welcome to the game page")
+![Alt text](images/starting-page.png?raw=true "Welcome to the game page")
 ![Alt text](images/page2.png?raw=true "Game page")
 
 I used grid and flexbox:

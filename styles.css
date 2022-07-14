@@ -9,7 +9,7 @@
 body {
   min-height: 100vh;
   min-width: 100vw;
-  background-color: #93cde0;
+  background-color: #c9e3ea;
 }
 
 header {
@@ -125,9 +125,6 @@ a {
   height: 200px;
   position: absolute;
   pointer-events: none;
-}
-
-.front {
 }
 
 .back {

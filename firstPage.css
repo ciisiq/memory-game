@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Comfortaa", cursive;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #c9e3ea;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background-color: #000000;
+  color: #f4c4c9;
+  align-items: center;
+  justify-content: flex-end;
+
+  /* import for to fix the header on top */
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  height: 60px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* to show after the header */
+  height: calc(100vh - 60px);
+  top: 60px;
+  position: relative;
+}
+
+.link {
+  text-decoration: none;
+  color: #f4c4c9;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ------------ Blue Containers ----------- */
+
+.blue-container {
+  background-color: #93cde0;
+  height: 450px;
+  width: 997px;
+  border-radius: 15px;
+  border: 2px solid #f4c4c9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-explanation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------ Explanation part ----------- */
+
+.explanation {
+  font-weight: bold;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  text-align: center;
+
+  position: relative;
+}
+
+/* ------------ First Panda ----------- */
+
+.wrap-panda-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.relax-panda {
+  height: 120px;
+  width: 160px;
+}
+
+h2 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ------------ Second Panda ----------- */
+
+.wrap-panda-btn {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  bottom: 150px;
+  right: 160px;
+}
+
+.panda-love {
+  height: 120px;
+  width: 160px;
+}
+
+/* Button CSS */
+.start {
+  background-color: #ffffff;
+  border: solid transparent;
+  border-radius: 10px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #f4c4c9;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.start:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.start:active {
+  transform: translateY(4px);
+}
