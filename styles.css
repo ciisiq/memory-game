@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
 * {
   margin: 0 auto;
   padding: 0;
-  /* overflow: hidden; */
-  overflow-x: hidden;
+  font-family: "Comfortaa", cursive;
 }
 
 body {
@@ -37,72 +38,116 @@ header {
   position: relative;
 }
 
-.lives {
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
+/* ----------------- LIVES AND BUTTON  ----------- */
+.wrap {
+  display: flex;
+  top: 20px;
+  position: relative;
 }
+
+.container {
+  display: flex;
+  gap: 1.4rem;
+  height: 5rem;
+  /* align-items: center; */
+}
+
+a {
+  text-decoration: none;
+  color: #f4c4c9;
+  font-size: 12px;
+}
+
+.lives {
+  font-weight: 700;
+}
+
+/* Button CSS */
+.reset {
+  background-color: #000000;
+  border: solid transparent;
+  border-radius: 12px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #f4c4c9;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+}
+
+.reset:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.reset:active {
+  transform: translateY(4px);
+}
+
+/* -------------------CARDS ------------- */
 
 .memory-game {
   display: grid;
-  grid-template-columns: repeat(4, 150px);
-  grid-template-rows: repeat(3, 200px);
-  gap: 1em;
+  grid-template-columns: repeat(4, 180px);
+  grid-template-rows: repeat(3, 220px);
   align-items: center;
   justify-content: center;
-
-  perspective: 1000px;
-  background-color: transparent;
   cursor: pointer;
+
+  /* to make the cards flip 3D*/
+  perspective: 1000px;
 }
 
 .card {
+  /* to make the cards above the others */
   position: relative;
-  transition: transform 0.5s;
+  /* to make the cards flip */
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition-timing-function: ease-in;
+  /* transition: transform 0.5s ease-in; */
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-  /* border: 2px solid #f4c4c9; */
   border-radius: 15px;
   background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   /*need the size for to be in place */
   width: 150px;
   height: 200px;
 }
 
-.card:active,
-.memory-game {
+/* to flip when it clicked with the event "click" */
+.toggleCard {
   transform: rotateY(180deg);
 }
 
 .front,
 .back {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  position: absolute;
-  background-color: transparent;
   width: 150px;
   height: 200px;
+  position: absolute;
 }
-
-/* .fron,
-.back:active {
-  transform: scale(2);
-} */
 
 .front {
 }
 
 .back {
   transform: rotateY(180deg);
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
+
+/* ------------------ MOBILE SIZE ------------- */
 
 @media (max-width: 390px) {
   .memory-game {
     grid-template-columns: repeat(3, 90px);
     grid-template-rows: repeat(4, 100px);
+    gap: 1em;
+  }
+
+  .main {
+    top: 20px;
   }
 
   .front,
@@ -115,5 +160,12 @@ header {
 
   .lives {
     font-size: 1.5rem;
+  }
+
+  .wrap {
+    top: 0px;
+  }
+  .container {
+    align-items: center;
   }
 }

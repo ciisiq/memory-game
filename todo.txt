@@ -1,8 +1,8 @@
-- Make a head 
-    - P = Mamory game
-    - P = Have Fun
+- Make a head 🆗
+    - P = Mamory game 🆗
+    - P = Have Fun 🆗
 
-- Make main <section>
+- Make main <section> 🆗
     
     Rith side:
     - p = Explanation about the game

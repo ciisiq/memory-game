@@ -1,71 +1,69 @@
-console.log("I'm here");
-
 const section = document.querySelector("section");
 const playerLives = document.querySelector(".livesPlayer");
+const resetButton = document.querySelector(".reset");
 
 let countLives = 3;
-
 playerLives.textContent = countLives;
 
 const getCards = () => [
   {
     image: "images/panda1-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda1",
   },
   {
     image: "images/panda2-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda2",
   },
   {
     image: "images/panda3-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda3",
   },
   {
     image: "images/panda4-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda4",
   },
   {
     image: "images/panda5-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda5",
   },
   {
     image: "images/panda6-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda6",
   },
   {
     image: "images/panda1-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda1",
   },
   {
     image: "images/panda2-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda2",
   },
   {
     image: "images/panda3-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda3",
   },
   {
     image: "images/panda4-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda4",
   },
   {
     image: "images/panda5-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda5",
   },
   {
     image: "images/panda6-01.png",
-    back: "images/pandafront-invert.png",
+    back: "images/pandafront-01.png",
     name: "panda6",
   },
 ];
@@ -90,12 +88,16 @@ const createCard = () => {
     backCard.classList = "back";
     frontCard.classList = "front";
 
-    frontCard.src = e.image;
-    backCard.src = e.back;
+    frontCard.src = e.back;
+    backCard.src = e.image;
 
     section.appendChild(card);
     card.appendChild(frontCard);
     card.appendChild(backCard);
+
+    card.addEventListener("click", (e) => {
+      card.classList.toggle("toggleCard");
+    });
   });
 };
 
