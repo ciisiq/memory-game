@@ -1,6 +1,8 @@
 * {
   margin: 0 auto;
   padding: 0;
+  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 body {
@@ -32,7 +34,7 @@ header {
   /* to show after the header */
   height: calc(100vh - 60px);
   top: 60px;
-  /* position: relative; */
+  position: relative;
 }
 
 .lives {
@@ -95,4 +97,23 @@ header {
 
 .back {
   transform: rotateY(180deg);
+}
+
+@media (max-width: 390px) {
+  .memory-game {
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(4, 100px);
+  }
+
+  .front,
+  .back,
+  .card {
+    width: 90px;
+    height: 100px;
+    border-radius: 10px;
+  }
+
+  .lives {
+    font-size: 1.5rem;
+  }
 }
