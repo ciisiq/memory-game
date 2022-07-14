@@ -1,6 +1,8 @@
 # Panda memory game 🐼
 
-A Simple project using Javascript and DOM manipulation</br></br>
+A Simple project using Javascript and DOM manipulation</br>
+
+[ 🐼 Play here 🐼 ](https://panda-memory-game.netlify.app/)</br></br>
 
 ❗❗ Panda's image were taken from the internet and I couldn't find who they belong to. I just create the design for the favicon and the cards layout! ❗❗ </br></br>
 
